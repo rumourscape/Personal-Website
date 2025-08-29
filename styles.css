@@ -1,0 +1,48 @@
+:root {
+    --bg-dark: #111213;
+    --fg-light: #d6d6d6;
+    --matrix-green: #39FF14;
+}
+
+body {
+    padding: 0 10px;
+    margin: 50px auto;
+    max-width: 650px;
+    background-color: var(--bg-dark);
+    color: var(--fg-light);
+    font-family:
+        "SF Mono", "SFMono-Regular", ui-monospace,
+        Menlo, Consolas, "Liberation Mono", monospace;
+
+    font-size: 0.9rem;
+    line-height: 1.4;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1 {
+    font-size: 1.8rem;
+    /* margin: 20px auto; */
+    color: #ffffff;
+}
+
+#maincontent {
+    max-width: 42em;
+    margin: 15 auto;
+    text-align: center;
+
+}
+
+a {
+    color: var(--matrix-green);
+    text-decoration: none;
+}
+
+a:hover,
+a:focus {
+    text-decoration: underline;
+}
+
+.news-date {
+    color: #0daeee;
+    font-weight: bold;
+}
