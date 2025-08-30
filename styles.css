@@ -27,7 +27,7 @@ h1 {
 
 #maincontent {
     max-width: 42em;
-    margin: 15 auto;
+    margin: auto;
     text-align: center;
 
 }
@@ -42,7 +42,58 @@ a:focus {
     text-decoration: underline;
 }
 
+.education {
+    color: #888;
+    font-size: 0.85rem;
+    margin: 10px 0 20px 0;
+}
+
 .news-date {
     color: #0daeee;
     font-weight: bold;
+}
+
+.conference {
+    color: rgb(251, 251, 51);
+}
+
+.publications {
+    text-align: left;
+    max-width: 42em;
+    margin: 0 auto;
+}
+
+.publications p {
+    margin-bottom: 20px;
+}
+
+.publications a {
+    color: #57d5be;
+}
+
+/* .publications a:hover {
+    color: #FF8E8E;
+} */
+
+
+/* Better mobile spacing */
+@media (max-width: 480px) {
+    body {
+        padding: 0 15px;
+        margin: 30px auto;
+    }
+    
+    h1 {
+        font-size: 1.5rem;
+    }
+    
+    body {
+        font-size: 0.85rem;
+    }
+    
+    /* Better link spacing on mobile */
+    #maincontent a {
+        display: inline-block;
+        margin: 0 5px;
+    }
 }
