@@ -1,12 +1,40 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Advait Joglekar</title>
+    <meta name="description" content="Personal website of Advait Joglekar, an AI researcher. Find information about his work, publications, and contact details.">
+    <meta name="keywords" content="Advait Joglekar, AI Research, Machine Learning, Natural Language Processing, IIT Madras, EMNLP, WMT, IWSLT, Voice Conversion, Translation, Publications">
+    <meta name="author" content="Advait Joglekar">
+
     <!-- favicon -->
     <link rel="icon" type="image/x-icon" href="anarchy.jpeg">
     <link rel="stylesheet" type="text/css" href="styles.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <style>
+        /* Typing Animation CSS */
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: orange; }
+        }
+
+        .typing-animation {
+            overflow: hidden; /* Hides text that isn't typed yet */
+            white-space: nowrap; /* Keeps text on one line */
+            margin: 0 auto; /* Adjust margin as needed */
+            border-right: .15em solid orange; /* Creates a blinking cursor */
+            animation: 
+                typing 3s steps(20, end),
+                blink-caret .75s step-end infinite;
+        }
+    </style>
 </head>
 
 <!-- Google tag (gtag.js) -->
@@ -21,7 +49,7 @@
 
 <body>
     <div id="maincontent">
-        <h1>Advait Joglekar</h1>
+        <h1><span id="name-typing" class="typing-animation"></span></h1>
         <p>I do AI research.</p>
         <!-- <p class="education">BS Data Science, IIT Madras</p> -->
         <a href="https://github.com/rumourscape" target="_blank">GitHub</a> | 
@@ -64,6 +92,37 @@
 
         
     </div>
+
+    <script>
+        const nameElement = document.getElementById('name-typing');
+        const nameText = "Advait Joglekar";
+        const typingSpeed = 100; // milliseconds per character
+        let i = 0;
+
+        function typeWriter() {
+            if (i < nameText.length) {
+                nameElement.textContent += nameText.charAt(i);
+                i++;
+                setTimeout(typeWriter, typingSpeed);
+            }
+            
+        }
+
+        // Reset the typing animation
+        function resetTyping() {
+            nameElement.textContent = "";
+            i = 0;
+        }
+
+        // Start the typing animation when the page loads
+        window.onload = typeWriter;
+
+        // Reset the typing animation on tab blur
+        window.onblur = resetTyping;
+
+        // Start the typing animation on tab focus
+        window.onfocus = typeWriter;
+    </script>
 
 </body>
 
