@@ -4,13 +4,16 @@
     --matrix-green: #39FF14;
 }
 
+html {
+    min-height: 100%;
+    background: linear-gradient(to bottom, var(--bg-dark) 25%, #2b0000 100%);
+}
+
 body {
     padding: 0 10px;
     margin: 50px auto;
     max-width: 650px;
-    background-color: var(--bg-dark);
     color: var(--fg-light);
-    background: linear-gradient(to bottom, var(--bg-dark) 25%, #2b0000 100%);
     font-family:
         "SF Mono", "SFMono-Regular", ui-monospace,
         Menlo, Consolas, "Liberation Mono", monospace;
