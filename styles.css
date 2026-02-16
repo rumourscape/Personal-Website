@@ -75,6 +75,27 @@ a:focus {
     color: #57d5be;
 }
 
+.blog-link {
+    display: inline-block;
+    /* color: #ff8fba; */
+    /* font-weight: bold; */
+    /* font-size: large; */
+
+    margin-top: 20px;
+    border: 2px solid #f0e3e8;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+.blog-content {
+    margin-top: 20px;
+    text-align: left;
+    max-width: 42em;
+    margin-left: auto;
+    margin-right: auto;
+    color: #ffffff;
+}
+
 /* .publications a:hover {
     color: #FF8E8E;
 } */
